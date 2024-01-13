@@ -6,13 +6,8 @@ const searchButton = () => {
   srchPhn.value = "";
 };
 
-
 const phoneDetails = (searchPhone) => {
-console.log(searchPhone);
-  let url = 'https://openapi.programming-hero.com/api/phones';
-if(searchPhone){
-  
-  fetch(`${url}?search=${searchPhone}`)
+  fetch(`https://openapi.programming-hero.com/api/phones?search=${searchPhone}`)
     .then((res) => res.json())
     .then((data) => {
       displayPhones(data.data, 6);
@@ -23,21 +18,6 @@ if(searchPhone){
         showBtn.classList.add("d-none");
       });
     });
-}
-else{
-  fetch(`${url}`)
-    .then((res) => res.json())
-    .then((data) => {
-      displayPhones(data.data, 6);
-      //   console.log(data.data);
-      const showBtn = document.getElementById("show-btn");
-      showBtn.addEventListener("click", function () {
-        displayPhones(data.data);
-        showBtn.classList.add("d-none");
-      });
-    });
-
-}
 
   const displayPhones = (phones, limit) => {
     const phonesDiv = document.getElementById("phones-div");
@@ -95,7 +75,7 @@ const showModal = (id) => {
       console.log(data);
       const modalId = document.getElementById("exampleModal");
       modalId.innerHTML = `
-  <div class="modal-dialog border bg-primary">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">${data.data.name}</h1>
@@ -130,4 +110,3 @@ const showSpinner = (load) => {
     spinner.classList.add("d-none");
   }
 };
-phoneDetails();
