@@ -110,3 +110,5 @@ const showSpinner = (load) => {
     spinner.classList.add("d-none");
   }
 };
+
+phoneDetails('samsung');
