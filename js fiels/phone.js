@@ -37,21 +37,21 @@ const phoneDetails = (searchPhone) => {
       const createPhoneDiv = document.createElement("div");
       createPhoneDiv.classList.add("col");
       createPhoneDiv.innerHTML = `
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                          <div class=" col-6">
-                            <img src="${phone.image}" class="img-fluid rounded-start" alt="...">
-                          </div>
-                          <div class=" col-6">
-                            <div class="card-body">
-                              <h5 class="card-title">${phone.phone_name}</h5>
-                              <p class="card-text">${phone.brand}</p>
-                              <p class="card-text"><small class="text-body-secondary">For more details please click the button.</small></p>
-                              <button type="button" class="btn btn-secondary">Details</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+      <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class=" col-6">
+          <img src="${phone.image}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class=" col-6">
+          <div class="card-body">
+            <h5 class="card-title">${phone.phone_name}</h5>
+            <p class="card-text">${phone.brand}</p>
+            <p class="card-text"><small class="text-body-secondary">For more details please click the button.</small></p>
+            <button type="button" class="btn btn-secondary">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
         `;
       phonesDiv.appendChild(createPhoneDiv);
     });
