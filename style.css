@@ -1,15 +1,19 @@
 * {
-    max-width: 1300px;
-    margin: auto;
+    /* max-width: 1300px; */
+    /* margin: auto; */
     font-family:Arial, Helvetica, sans-serif;
 }
-body{
-    margin: 0;
-}
+
 .img {
     width: 1300px;
     height: 600px;
 }
+.custom-rounded {
+    border: none;
+    border-radius: 50%;
+    padding: 1px; /* Optional: Added padding to make the button look better */
+}
+
 @media screen and (max-width: 576px){
     .img {
         width: 100%;

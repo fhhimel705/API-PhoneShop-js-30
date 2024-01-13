@@ -14,7 +14,15 @@
 
 <body class="container">
     <header>
-        <h1 class="text-center my-5 fw-bold ">Welcome to our <span class="text-secondary">Phone shop!!!</span></h1>
+        <!-- <h1 class="text-center my-5 fw-bold ">Welcome to our <span class="text-secondary">Phone shop!!!</span></h1> -->
+        <nav class="navbar d-flex justify-content-between align-center bg-dark mb-5 border-bottom border-body" data-bs-theme="dark">
+            <div>
+                <h2 class="text-primary-emphasis">PhoneShop BD</h2>
+            </div>
+            <div>
+                <button class="p-1 py-2 text-primary-emphasis bg-dark custom-rounded">Login</button>
+            </div>
+        </nav>
         <!-- banner -->
         <section>
             <div id="carouselExampleCaptions" class="carousel slide">
@@ -33,7 +41,7 @@
                             <div class="input-group flex">
                                 <input id="search-phone" type="text" class="form-control w-50 p-lg-2 py-0"
                                     placeholder="Search Your Phone">
-                                <button onclick="searchButton()" type="button"
+                                <button  id="search-btn" type="button"
                                     class="btn btn-secondary p-lg-2 py-0">Search</button>
                             </div>
                             <p class="my-lg-3 ">Get specaila offers</p>
@@ -71,7 +79,7 @@
             </div>
         </section>
     </header>
-    <main class="my-5">
+    <main class="my-5 ">
         <section>
             <div id="phones-div" class="row row-cols-1 row-cols-md-3 g-4">
             </div>
@@ -85,10 +93,30 @@
         <section>
             <div id="spinner" style="height: 0px;" class="d-flex align-center justify-content-center d-none">
                 <div class="spinner-border text-secondary" role="status">
-                  <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-              </div>
+            </div>
         </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
     </main>
     <footer class="bg-secondary p-5 row">
         <div class="col-md-2 col">
@@ -114,11 +142,12 @@
         </div>
         <div class="col-md-4">
             <h3>Contact Us</h3>
-                
-                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-                <button type="button" class="btn btn-light mt-3">Submit</button>
 
-              
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                aria-describedby="addon-wrapping">
+            <button type="button" class="btn btn-light mt-3">Submit</button>
+
+
         </div>
 
     </footer>
@@ -129,7 +158,8 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <!-- js link -->
-    <script src="js fiels/phone.js"></script>
+    <!-- <script src="js fiels/phone.js"></script> -->
+    <script src="js fiels/test.js"></script>
 </body>
 
 </html>
